@@ -22,5 +22,12 @@ int main(int argc, char *argv[]) {
 }
 
 bool is_ascending(int *arr, int n) {
-    // TODO
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i-1] > arr[i]) {
+            return false;
+        }
+    }
+
+    return true;
 }
