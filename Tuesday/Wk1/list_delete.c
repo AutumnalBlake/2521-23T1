@@ -36,5 +36,26 @@ int main(int argc, char *argv[]) {
 }
 
 ListNode list_delete(ListNode l, int val) {
-    // TODO
+    if (l == NULL) return l;
+    if (l->val == val) {
+        ListNode new_head = l->next;
+        free(l);
+        return new_head;
+    }
+
+    ListNode curr = l->next;
+    ListNode prev = l;
+    while (curr != NULL) {
+        printf("%d %d\n", curr->val, prev->val);
+        if (curr->val == val) {
+            prev->next = curr->next;
+            free(curr);
+            return l;
+        }
+
+        prev = curr;
+        curr = curr->next;
+    }
+
+    return l;
 }

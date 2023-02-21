@@ -22,5 +22,6 @@ int main(int argc, char *argv[]) {
 }
 
 int list_sum(ListNode l) {
-    // TODO
+    if (l == NULL) return 0;
+    return list_sum(l->next) + l->val;
 }
