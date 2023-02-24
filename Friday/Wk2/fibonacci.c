@@ -2,6 +2,9 @@
 #include <stdlib.h>
 
 int fib(int n) {
+    // Recursive O(2^n) version - return fib(n - 1) + fib(n - 2)     
+    
+    // Better O(n) version     
     int *dp = malloc((n + 1) * sizeof (int));
     dp[0] = 0;
     dp[1] = 1;
