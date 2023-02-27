@@ -12,56 +12,9 @@ typedef Node *List;
 List list_from_args(int argc, char *argv[]);
 void list_print(List l);
 
-int list_length(List l) {
-	if (l == NULL) return 0;
-	return 1 + list_length(l->next);
-}
-
-int list_sum(List l) {
-	if (l == NULL) {
-		return 0;
-	}
-	return l->data + list_sum(l->next);
-}
-
-int list_count_odds(List l) {
-	if (l == NULL) {
-		return 0;
-	}
-	if (l->data % 2 == 1) {
-		return 1 + list_count_odds(l->next);
-	}
-	return list_count_odds(l->next);
-}
-
-bool list_is_sorted(List l) {
-	if (l == NULL || l->next == NULL) {
-		return true;
-	}
-	if (!list_is_sorted(l->next)) {
-		return false;
-	}
-	return l->data < l->next->data;
-}
-
-List list_delete(List l, int val) {
-	if (l == NULL) {
-		return l;
-	}
-	if (l->data == val) {
-		List tail = l->next;
-		free(l);
-		return tail;
-	} else {
-		l->next = list_delete(l->next, val);
-		return l;
-	}
-}
-
 int main(int argc, char *argv[]) {
 	List l = list_from_args(argc, argv);
 	list_print(l);
-	list_print(list_delete(l, 4));
 }
 
 // HELPERS
