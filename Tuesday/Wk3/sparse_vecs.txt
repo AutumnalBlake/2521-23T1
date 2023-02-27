@@ -1,0 +1,39 @@
+Function AddVectors(A, B): O(m + n)
+    Input: Sparse vectors A, B (index, value)
+    Output: A + B
+
+    Let i, j = 0
+    Let S be an empty vector
+
+    While i < n or j < m:
+        If A[i].index < B[j].index:
+            Add A[i] to S
+            i = i + 1
+
+        Else if A[i].index > B[j].index:
+            Add B[j] to S
+            j = j + 1
+
+        Else:
+            Add (A[i].index, A[i].val + B[j].val) to S
+            i = i + 1
+            j = j = 1
+
+    Return S
+    
+
+[
+    (0, 3) 
+    (2, 4) <- i
+    (5, 7)
+    (8, 1)
+]
+[
+    (1, 3) 
+    (2, 3) <- j
+    (4, 1)
+    (5, 7)
+    (9, 1)
+]
+
+(0, 3), (1, 3)

@@ -8,19 +8,33 @@ typedef struct node {
 
 typedef Node *List;
 
-void list_print_second(List l);
+void list_print_evens(List l);
+void list_print_odds(List l);
 
-
-void list_print_second(List l) {
-        
+void list_print_evens(List l) {
+	if (l == NULL) return;
+	list_print_odds(l->next);
 }
+
+void list_print_odds(List l) {
+	if (l == NULL) return;
+	printf("%d\n", l->data);
+	list_print_evens(l->next);
+}
+
+
+// void list_print_second(List l) {
+// 	if (l == NULL || l->next == NULL) return;
+// 	printf("%d\n", l->next->data);
+// 	list_print_second(l->next->next);
+// }
 
 List list_from_args(int argc, char *argv[]);
 void list_print(List l);
 
 int main(int argc, char *argv[]) {
 	List l = list_from_args(argc, argv);
-	list_print_second(l);
+	list_print_evens(l);
 }
 
 // HELPERS

@@ -1,0 +1,29 @@
+Function Power(x, y): O(y)
+    Output: x^y
+
+    If y = 0:
+        Return 1
+
+    x * Power(x, y - 1)
+
+
+Function Power(x, y): O(log y)
+
+    If y = 0:
+        Return 1
+
+    Let half_power = Power(x, y/2)
+
+    If y is odd:
+        Return x * half_power * half_power
+
+    Return half_power * half_power
+
+    T(n) = T(n / 2) + O(1)
+
+x^16
+x^8
+x^4
+x^2
+x^1
+x^0

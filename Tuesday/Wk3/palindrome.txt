@@ -1,0 +1,9 @@
+Function IsPalindrome (S):
+    Input: S (String) of n characters
+    Output: True/False
+
+    For i from 0 to n/2:
+        If S[i] != S[n - i - 1]:
+            Return False
+    
+    Return True
