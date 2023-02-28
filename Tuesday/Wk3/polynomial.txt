@@ -1,3 +1,11 @@
+                     n
+                   =====
+                   \         i
+Rexall that P(x) =  >    a  x
+                   /      i
+                   =====
+                   i = 1
+
 Function EvaluatePolynomial(A, x): O(n^2)
     Input: Array A of (n + 1) coefficients, x
     Output: P(x)
