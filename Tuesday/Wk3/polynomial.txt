@@ -1,3 +1,11 @@
+         n            
+        ___           
+        ╲            i
+P(x) =  ╱    A[i] ⋅ x 
+        ‾‾‾           
+       i = 0          
+
+
 Function EvaluatePolynomial(A, x): O(n^2)
     Input: Array A of (n + 1) coefficients, x
     Output: P(x)
