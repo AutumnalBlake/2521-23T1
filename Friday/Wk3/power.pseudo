@@ -1,0 +1,18 @@
+// O(log y)
+
+function Power(x, y) do
+    Input: integer x, positive integer y
+    Output: x^y
+    
+    if y == 0 do
+        return 1
+    end
+
+    let half_power = Power(x, y/2)
+
+    if y is even do
+        return half_power * half_power
+    else do
+        return x * half_power * half_power
+    end
+end

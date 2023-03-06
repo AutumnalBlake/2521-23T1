@@ -1,0 +1,13 @@
+// O(n)
+function Palindrome(S, n) do
+    Input: S a string of length n
+    Output: True if S is a palindrome
+
+    for i from 0 to n/2 do
+        if S[i] != S[n - i - 1] do
+            return False
+        end
+    end
+
+    return True
+end
