@@ -1,0 +1,16 @@
+
+function PrintPermutation(A, P):
+	Input:
+        array A of n items
+        array P of n positions
+	
+    // For each position i
+	for i from 1 to n do
+        // Find the item that belongs at i
+		for j from 0 to n - 1 do
+			if P[j] == i do
+				print A[j]
+			end if
+		end for
+	end for
+

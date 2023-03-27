@@ -1,0 +1,39 @@
+         n            
+        ___           
+        ╲            i
+P(x) =  ╱    A[i] ⋅ x 
+        ‾‾‾           
+       i = 0          
+
+
+Function EvaluatePolynomial(A, x): O(n^2)
+    Input: Array A of (n + 1) coefficients, x
+    Output: P(x)
+
+    Let result = 0
+
+    for i from 0 to n:
+        result = result + A[i] * Power(x, i)
+
+    Return result
+
+Function Power(x, k): O(k)
+    Output: x^k
+
+    Let result = 1
+
+    Repeat k times:
+        result = result * x
+
+Function EvaluatePolynomial(A, x): O(n)
+    Input: Array A of (n + 1) coefficients, x
+    Output: P(x)
+
+    Let result = 0
+    Let power_x = 1
+
+    for i from 0 to n:
+        result = result + A[i] * power_x
+        power_x = power_x * x
+
+    Return result

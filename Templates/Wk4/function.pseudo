@@ -1,0 +1,21 @@
+
+    // What does this function print?
+    // What is its time complexity?
+
+    function ??? do
+        input: Array A with length n
+        
+        prev <- A[0]
+        i <- 1
+
+        while i < n do
+            while A[i] == prev do
+                i <- i + 1
+            end
+            
+            print A[i]
+            prev <- A[i]
+            i <- i + 1
+        end 
+    end
+

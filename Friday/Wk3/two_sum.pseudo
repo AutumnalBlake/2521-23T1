@@ -1,0 +1,18 @@
+// O(n^2)
+
+function TwoSum(A, s) do
+    Input: Array s of n numbers,
+            Target value s
+    Output: True if there are two numbers in A
+            that add to s
+
+    for i from 0 to n-1 do      // O(n)
+        for j from i+1 to n-1 do // n + (n-1) + (n-2) ... 1
+            if A[i] + A[j] == s do
+                return True
+            end
+        end
+    end
+
+    return False
+end

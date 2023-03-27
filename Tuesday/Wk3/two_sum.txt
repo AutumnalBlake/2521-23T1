@@ -1,0 +1,12 @@
+Function TwoSum (A, k):
+    Input: Array A of n numbers, target value k
+    Output: Whether A has 2 numbers that add to k
+
+    For i from 0 to n - 1:
+        For j from i + 1 to n - 1:
+            If A[i] + A[j] = k: 
+                Return True
+
+    Return False
+
+    (n) + (n - 1) + (n - 2) + ... + (1)

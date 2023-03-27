@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <stdbool.h>
 
 typedef struct node {
 	int data;
@@ -9,21 +8,19 @@ typedef struct node {
 
 typedef Node *List;
 
-// Predicates
-bool is_even(int x) { return x % 2 == 0; }
-bool gt_5(int x) { return x > 5; }
+void list_print_second(List l);
 
-// Reducers
-int sum(int acc, int x) { return acc + x; }
-int max(int acc, int x) { return acc > x ? acc : x; }
-int count_even(int acc, int x) { return is_even(x) ? acc + 1 : acc; }
+
+void list_print_second(List l) {
+        
+}
 
 List list_from_args(int argc, char *argv[]);
 void list_print(List l);
 
 int main(int argc, char *argv[]) {
 	List l = list_from_args(argc, argv);
-	list_print(l);
+	list_print_second(l);
 }
 
 // HELPERS
@@ -44,12 +41,8 @@ List list_from_args(int argc, char *argv[]) {
 
 // Print a linked list
 void list_print(List l) {
-    printf("[");
 	for (List curr = l; curr != NULL; curr = curr->next) {
-        printf("%d", curr->data);
-        if (curr->next) printf(", ");
+		printf("[%d] -> ", curr->data);
 	}
-	printf("]\n");
+	printf("X\n");
 }
-
-

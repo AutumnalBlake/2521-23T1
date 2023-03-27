@@ -1,0 +1,37 @@
+function Polynomial(A, x) do
+    Let result = 0
+    Let x_power = 1
+
+    for i from 0 to n do
+        result = result + x_power * A[i]
+        x_power = x_power * x
+    end
+
+    return result
+end
+
+// O(n^2)
+function Polynomial(A, x) do
+    Input: Array A of n + 1 coefficients
+    Output: P(x)
+
+    Let result = 0
+
+    for i from 0 to n do
+        result = result + Power(x, i) * A[i]
+    end
+
+    return result
+end
+
+function Power(x, y) do
+    Output: x ^ y
+
+    Let result = 1
+
+    for i from 1 to y do
+        result = result * x
+    end
+
+    return result
+end

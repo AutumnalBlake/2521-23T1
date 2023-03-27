@@ -44,12 +44,8 @@ List list_from_args(int argc, char *argv[]) {
 
 // Print a linked list
 void list_print(List l) {
-    printf("[");
 	for (List curr = l; curr != NULL; curr = curr->next) {
-        printf("%d", curr->data);
-        if (curr->next) printf(", ");
+		printf("[%d] -> ", curr->data);
 	}
-	printf("]\n");
+	printf("X\n");
 }
-
-
