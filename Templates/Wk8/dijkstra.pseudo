@@ -1,0 +1,21 @@
+function DijkstraSSSP(G, src): 
+    dist <- [∞ for each vertex]
+    unvisited <- all vertices of G
+
+    while unvisited still has vertices:
+        // Take the 'closest' unvisited vertex
+        v <- vertex ∈ unvisited with min dist[v]
+        remove v from unvisited
+        
+        for each vertex w adjacent to v: 
+            // Relax v-w
+            if dist[v] + weight(v, w) < dist[w]:
+                dist[w] <- dist[v] + weight(v, w)
+
+
+    return dist
+
+// We can implement the 'unvisited' set efficiently with
+// a PRIORITY QUEUE (min heap)
+
+// What if we want to reconstruct the path after?

@@ -10,9 +10,9 @@
 
 typedef struct BSTNode *BSTree;
 struct BSTNode {
-	int value;
-	BSTree left;
-	BSTree right;
+  int value;
+  BSTree left;
+  BSTree right;
 };
 
 ////////////////////////////////////////////////////////////////////////
@@ -38,4 +38,3 @@ void printBSTree(BSTree t);
 void freeBSTree(BSTree t);
 
 #endif
-

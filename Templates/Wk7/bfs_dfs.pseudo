@@ -1,0 +1,45 @@
+
+
+    function BreadthFirstSearch(G, source):
+        input: Graph G, source vertex
+
+        create queue Q
+        Q.enqueue(source)
+
+        let visited = {source}
+
+        while Q not empty do
+            let v = Q.dequeue()
+            visit(v)
+
+            for w ∈ neighbours(v) do
+                if w ∉ visited do
+                    add w to visited
+                    Q.enqueue(w)
+                end
+            end
+        end
+    
+
+
+    function DepthFirstSearch(G, source):
+        input: Graph G, source vertex
+
+        create stack S
+        S.push(source)
+
+        let visited = {source}
+
+        while S not empty do
+            let v = S.pop()
+            visit(v)
+
+            if w ∉ visited do
+                add w to visited
+                for w ∈ neighbours(v) do
+                        S.push(w)
+                end
+            end
+        end
+    
+

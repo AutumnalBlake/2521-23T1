@@ -1,0 +1,19 @@
+
+    function Insert(T, v):
+        input: BST T, value v to insert
+        output: New root of T
+
+        if T is empty:
+            return node with v as value
+
+        else if v < T.value:
+            set T.left = Insert(T.left, v)
+            return T
+
+        else:
+            set T.right Insert(T.right, v)
+            return T
+
+
+
+
