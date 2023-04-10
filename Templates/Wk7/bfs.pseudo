@@ -1,0 +1,39 @@
+function BFS(G, source) {
+    let Q be an empty queue
+    let visited = {}
+
+    enqueue source
+    add source to visited
+
+    while Q is not empty do
+        let v = Q.dequeue()
+
+        visit v
+
+        for each vertex w adjacent to v do
+            if w is in visited, skip it
+            else do
+                enqueue(w)
+                add w to visited
+            end
+        end
+    end
+}
+
+function DFS(G, source) {
+    let S be an empty stack
+    let visited = {}
+
+    while S is not empty do
+        let v = S.pop()
+
+        if v is not in visited do
+            visit(v)
+            add v to visited
+
+            for each neighbour w of v do
+                S.push(w)
+            end
+        end
+    end
+}
