@@ -1,0 +1,33 @@
+function KruskalMST(G): 
+    // Algorithm outline:
+    // - Sort all edges by increasing weight
+    // - Add edges by increasing weight
+    // - Remove if a cycle is formed
+
+    MST <- new graph with all vertices of G but no edges
+    edges <- edges of G, sorted by weight
+
+    while MST is not a tree:
+        e <- next smallest edge ∈ edges
+        add e to MST
+
+        if MST has a cycle:
+            remove e from MST
+
+    return MST
+
+    
+function PrimMST(G):
+    // Algorithm outline:
+    // - Start at any vertex
+    // - One by one, add the smallest edge that starts inside the
+    //   partial MST but ends outside it
+
+    MST <- empty graph
+    add any vertex ∈ G to MST
+
+    while MST is not a tree:
+        e <- smallest edge v-w from G where v ∈ MST but w ∉ MST
+        add w and e to MST
+    
+    return MST
